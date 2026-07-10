@@ -20,13 +20,10 @@
 
 <header class="site-header">
   <div class="container header-inner">
-
     <a class="brand" href="../index.html">Abdou-Hayi</a>
 
     <button class="menu-toggle" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
     <nav class="navbar">
@@ -38,7 +35,6 @@
       <a href="../gallery.html">Galerie</a>
       <a href="../contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
 
@@ -80,7 +76,7 @@
 
     <img
       src="../assets/img/projects/dashboard-cnc.png"
-      alt="Dashboard du projet de maintenance prédictive CNC"
+      alt="Dashboard SCADA Lite du projet de maintenance prédictive CNC"
     >
 
   </div>
@@ -92,23 +88,19 @@
     <article class="detail-content reveal">
 
       <h2>Contexte</h2>
-
       <p>
-        Ce projet reproduit une chaîne complète de supervision industrielle
-        pour une machine CNC. Il associe une interface embarquée, la
-        communication MQTT, un moteur de Machine Learning et un dashboard
-        SCADA Lite.
+        Ce projet reproduit une chaîne complète de supervision industrielle pour
+        une machine CNC. Il associe une interface embarquée, la communication
+        MQTT, un moteur de Machine Learning et un dashboard SCADA Lite.
       </p>
 
       <h2>Problématique</h2>
-
       <p>
         Comment surveiller l’état d’une machine, détecter les dérives de
         fonctionnement et anticiper les pannes avant un arrêt critique ?
       </p>
 
       <h2>Objectifs</h2>
-
       <ul>
         <li>Simuler et transmettre les données de capteurs CNC.</li>
         <li>Superviser les mesures en temps réel.</li>
@@ -118,7 +110,6 @@
       </ul>
 
       <h2>Fonctionnement</h2>
-
       <p>
         La TAB5 permet de saisir ou de générer automatiquement les valeurs des
         capteurs. Les données sont publiées via MQTT, puis analysées par un
@@ -126,26 +117,48 @@
         prédiction et le score de santé sur un dashboard SCADA Lite.
       </p>
 
-      <h2>Architecture</h2>
+      <!-- ARCHITECTURE GLOBALE -->
+      <h2>Architecture globale du système</h2>
+      <p>
+        L’architecture relie l’interface embarquée TAB5, le broker MQTT, le
+        moteur de prédiction Python, le dashboard Node-RED et les mécanismes
+        d’alerte. Elle représente le parcours complet des données, depuis leur
+        acquisition jusqu’à la décision de maintenance.
+      </p>
 
-      <img
-        src="../assets/img/projects/architecture-maintenance-cnc.png"
-        alt="Architecture du système de maintenance prédictive CNC"
-        style="width:100%; border-radius:18px; margin-top:15px;"
-      >
+      <div class="project-architecture-image">
+        <img
+          src="../assets/img/projects/architecture-globale-cnc.png"
+          alt="Architecture globale du système de maintenance prédictive CNC"
+        >
+      </div>
+
+      <!-- ARCHITECTURE MACHINE LEARNING -->
+      <h2>Architecture Machine Learning</h2>
+      <p>
+        Le modèle exploite les données historiques de fonctionnement afin de
+        classer l’état de la machine en quatre niveaux : NORMAL, FATIGUE,
+        DEGRADE ou CRITIQUE. Le résultat est ensuite renvoyé vers Node-RED et
+        la TAB5 pour être affiché à l’opérateur.
+      </p>
+
+      <div class="project-architecture-image">
+        <img
+          src="../assets/img/projects/architecture-machine-learning-cnc.png"
+          alt="Architecture Machine Learning du système de maintenance prédictive CNC"
+        >
+      </div>
 
       <h2>Résultats</h2>
-
       <ul>
         <li>Communication MQTT bidirectionnelle fonctionnelle.</li>
         <li>Prédiction en temps réel : NORMAL, FATIGUE, DEGRADE, CRITIQUE.</li>
-        <li>Affichage sur TAB5 et dashboard Node-RED.</li>
+        <li>Affichage de la prédiction sur TAB5 et dashboard Node-RED.</li>
         <li>Historisation des mesures dans un fichier CSV.</li>
         <li>Alertes Email et SMS en cas d’état critique.</li>
       </ul>
 
       <h2>Perspectives d’amélioration</h2>
-
       <p>
         Connecter de vrais capteurs industriels, intégrer Modbus TCP ou OPC UA,
         sécuriser MQTT avec TLS et adapter le système à d’autres équipements
@@ -153,18 +166,15 @@
       </p>
 
       <h2>Galerie du projet</h2>
-
       <div class="mini-gallery">
         <img
           src="../assets/img/projects/tab5-cnc-interface.jpg"
-          alt="Interface TAB5 CNC"
+          alt="Interface TAB5 du projet CNC"
         >
-
         <img
           src="../assets/img/projects/node-red-cnc.png"
-          alt="Flow Node-RED CNC"
+          alt="Flow Node-RED du projet CNC"
         >
-
         <img
           src="../assets/img/projects/dashboard-cnc-complet.png"
           alt="Dashboard SCADA CNC"
@@ -176,7 +186,6 @@
     <aside class="detail-side reveal">
 
       <h3>Technologies</h3>
-
       <div class="chips">
         <span>TAB5</span>
         <span>Arduino</span>
@@ -189,16 +198,13 @@
       </div>
 
       <h3>Autres projets</h3>
-
       <div class="side-links">
         <a href="cyber-compliance.html">
           Pré-évaluation de conformité cybersécurité
         </a>
-
         <a href="geolocation.html">
           Géolocalisation Indoor & Outdoor
         </a>
-
         <a href="robot-obstacle.html">
           Robot éviteur d’obstacles
         </a>
@@ -229,12 +235,10 @@
 </main>
 
 <footer class="footer">
-
   <div class="container footer-grid">
 
     <div>
       <h3>Abdou-Hayi SALIOU</h3>
-
       <p>
         Futur ingénieur en systèmes électroniques embarqués, orienté IoT,
         supervision industrielle, intelligence artificielle appliquée et
@@ -257,28 +261,9 @@
 
     <div>
       <h4>Réseaux</h4>
-
-      <a
-        href="https://www.linkedin.com/in/abdou-hayi-saliou"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://github.com/abdouhayisaliou"
-        target="_blank"
-      >
-        GitHub
-      </a>
-
-      <a
-        href="../assets/docs/CV-Abdou-Hayi-SALIOU.pdf"
-        target="_blank"
-      >
-        Télécharger CV
-      </a>
-
+      <a href="https://www.linkedin.com/in/abdou-hayi-saliou" target="_blank">LinkedIn</a>
+      <a href="https://github.com/abdouhayisaliou" target="_blank">GitHub</a>
+      <a href="../assets/docs/CV-Abdou-Hayi-SALIOU.pdf" target="_blank">Télécharger CV</a>
       <a href="../gallery.html">Galerie</a>
     </div>
 
@@ -287,7 +272,6 @@
   <div class="container copyright">
     © 2026 Abdou-Hayi SALIOU — Portfolio professionnel
   </div>
-
 </footer>
 
 <a href="#" class="back-top" aria-label="Retour en haut">↑</a>
