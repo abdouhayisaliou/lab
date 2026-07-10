@@ -23,7 +23,9 @@
     <a class="brand" href="../index.html">Abdou-Hayi</a>
 
     <button class="menu-toggle" aria-label="Ouvrir le menu">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="navbar">
@@ -40,197 +42,227 @@
 
 <main>
 
-<section class="detail-hero">
-  <div class="container detail-grid reveal">
+  <!-- HERO -->
+  <section class="detail-hero">
+    <div class="container detail-grid reveal">
 
-    <div>
-      <span class="eyebrow">Projet • Industrie 4.0 / SCADA</span>
+      <div>
+        <span class="eyebrow">Projet • Industrie 4.0 / SCADA</span>
 
-      <h1>Maintenance Prédictive CNC</h1>
+        <h1>Maintenance Prédictive CNC</h1>
 
-      <p>
-        Prototype de supervision industrielle permettant d’analyser l’état
-        d’une machine CNC, de prédire les anomalies et de générer des alertes.
-      </p>
+        <p>
+          Prototype de supervision industrielle permettant d’analyser l’état
+          d’une machine CNC, de prédire les anomalies et de générer des alertes.
+        </p>
 
-      <div class="chips">
-        <span>TAB5</span>
-        <span>MQTT</span>
-        <span>Node-RED</span>
-        <span>Python</span>
-        <span>Random Forest</span>
-        <span>SCADA Lite</span>
+        <div class="chips">
+          <span>TAB5</span>
+          <span>MQTT</span>
+          <span>Node-RED</span>
+          <span>Python</span>
+          <span>Random Forest</span>
+          <span>SCADA Lite</span>
+        </div>
+
+        <div class="detail-actions">
+          <a
+            class="btn primary"
+            href="https://github.com/abdouhayisaliou/maintenance-predictive-avec-tab5-mqtt-et-machine-learning"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le projet sur GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="detail-actions">
-        <a
-          class="btn primary"
-          href="https://github.com/abdouhayisaliou/maintenance-predictive-avec-tab5-mqtt-et-machine-learning"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Voir le projet sur GitHub
-        </a>
-      </div>
+      <img
+        src="../assets/img/projects/dashboard-cnc.png"
+        alt="Dashboard SCADA Lite du projet de maintenance prédictive CNC"
+      >
+
     </div>
+  </section>
 
-    <img
-      src="../assets/img/projects/dashboard-cnc.png"
-      alt="Dashboard SCADA Lite du projet de maintenance prédictive CNC"
-    >
+  <!-- ARCHITECTURES EN PLEINE LARGEUR -->
+  <section class="architecture-showcase">
+    <div class="container">
 
-  </div>
-</section>
+      <div class="architecture-showcase-heading">
+        <span class="eyebrow">Vue d’ensemble technique</span>
 
-<section class="section">
-  <div class="container detail-layout">
+        <h2>Architecture globale du système</h2>
 
-    <article class="detail-content reveal">
+        <p>
+          Cette architecture présente le parcours complet des données :
+          acquisition sur la TAB5, communication MQTT, analyse Python,
+          supervision Node-RED, alertes et retour de prédiction.
+        </p>
+      </div>
 
-      <h2>Contexte</h2>
-      <p>
-        Ce projet reproduit une chaîne complète de supervision industrielle pour
-        une machine CNC. Il associe une interface embarquée, la communication
-        MQTT, un moteur de Machine Learning et un dashboard SCADA Lite.
-      </p>
-
-      <h2>Problématique</h2>
-      <p>
-        Comment surveiller l’état d’une machine, détecter les dérives de
-        fonctionnement et anticiper les pannes avant un arrêt critique ?
-      </p>
-
-      <h2>Objectifs</h2>
-      <ul>
-        <li>Simuler et transmettre les données de capteurs CNC.</li>
-        <li>Superviser les mesures en temps réel.</li>
-        <li>Prédire l’état de la machine grâce au Machine Learning.</li>
-        <li>Afficher un score de santé.</li>
-        <li>Envoyer des alertes Email et SMS.</li>
-      </ul>
-
-      <h2>Fonctionnement</h2>
-      <p>
-        La TAB5 permet de saisir ou de générer automatiquement les valeurs des
-        capteurs. Les données sont publiées via MQTT, puis analysées par un
-        modèle Random Forest en Python. Node-RED affiche les mesures, la
-        prédiction et le score de santé sur un dashboard SCADA Lite.
-      </p>
-
-      <!-- ARCHITECTURE GLOBALE -->
-      <h2>Architecture globale du système</h2>
-      <p>
-        L’architecture relie l’interface embarquée TAB5, le broker MQTT, le
-        moteur de prédiction Python, le dashboard Node-RED et les mécanismes
-        d’alerte. Elle représente le parcours complet des données, depuis leur
-        acquisition jusqu’à la décision de maintenance.
-      </p>
-
-      <div class="project-architecture-image">
+      <div class="architecture-showcase-card">
         <img
           src="../assets/img/projects/architecture-globale-cnc.png"
           alt="Architecture globale du système de maintenance prédictive CNC"
         >
       </div>
 
-      <!-- ARCHITECTURE MACHINE LEARNING -->
-      <h2>Architecture Machine Learning</h2>
-      <p>
-        Le modèle exploite les données historiques de fonctionnement afin de
-        classer l’état de la machine en quatre niveaux : NORMAL, FATIGUE,
-        DEGRADE ou CRITIQUE. Le résultat est ensuite renvoyé vers Node-RED et
-        la TAB5 pour être affiché à l’opérateur.
-      </p>
+      <div class="architecture-showcase-heading architecture-ml-heading">
+        <span class="eyebrow">Intelligence artificielle</span>
 
-      <div class="project-architecture-image">
+        <h2>Architecture Machine Learning</h2>
+
+        <p>
+          Cette partie présente la préparation des données, l’entraînement du
+          modèle Random Forest, la prédiction de l’état de la machine et la
+          restitution du résultat sur le dashboard SCADA Lite.
+        </p>
+      </div>
+
+      <div class="architecture-showcase-card">
         <img
           src="../assets/img/projects/architecture-machine-learning-cnc.png"
           alt="Architecture Machine Learning du système de maintenance prédictive CNC"
         >
       </div>
 
-      <h2>Résultats</h2>
-      <ul>
-        <li>Communication MQTT bidirectionnelle fonctionnelle.</li>
-        <li>Prédiction en temps réel : NORMAL, FATIGUE, DEGRADE, CRITIQUE.</li>
-        <li>Affichage de la prédiction sur TAB5 et dashboard Node-RED.</li>
-        <li>Historisation des mesures dans un fichier CSV.</li>
-        <li>Alertes Email et SMS en cas d’état critique.</li>
-      </ul>
+    </div>
+  </section>
 
-      <h2>Perspectives d’amélioration</h2>
-      <p>
-        Connecter de vrais capteurs industriels, intégrer Modbus TCP ou OPC UA,
-        sécuriser MQTT avec TLS et adapter le système à d’autres équipements
-        industriels.
-      </p>
+  <!-- CONTENU DU PROJET -->
+  <section class="section">
+    <div class="container detail-layout">
 
-      <h2>Galerie du projet</h2>
-      <div class="mini-gallery">
-        <img
-          src="../assets/img/projects/tab5-cnc-interface.jpg"
-          alt="Interface TAB5 du projet CNC"
+      <article class="detail-content reveal">
+
+        <h2>Contexte</h2>
+
+        <p>
+          Ce projet reproduit une chaîne complète de supervision industrielle
+          pour une machine CNC. Il associe une interface embarquée, la
+          communication MQTT, un moteur de Machine Learning et un dashboard
+          SCADA Lite.
+        </p>
+
+        <h2>Problématique</h2>
+
+        <p>
+          Comment surveiller l’état d’une machine, détecter les dérives de
+          fonctionnement et anticiper les pannes avant un arrêt critique ?
+        </p>
+
+        <h2>Objectifs</h2>
+
+        <ul>
+          <li>Simuler et transmettre les données de capteurs CNC.</li>
+          <li>Superviser les mesures en temps réel.</li>
+          <li>Prédire l’état de la machine grâce au Machine Learning.</li>
+          <li>Afficher un score de santé.</li>
+          <li>Envoyer des alertes Email et SMS.</li>
+        </ul>
+
+        <h2>Fonctionnement</h2>
+
+        <p>
+          La TAB5 permet de saisir ou de générer automatiquement les valeurs
+          de capteurs. Les données sont publiées via MQTT, puis analysées par
+          un modèle Random Forest en Python. Node-RED affiche les mesures, la
+          prédiction et le score de santé sur un dashboard SCADA Lite.
+        </p>
+
+        <h2>Résultats</h2>
+
+        <ul>
+          <li>Communication MQTT bidirectionnelle fonctionnelle.</li>
+          <li>Prédiction en temps réel : NORMAL, FATIGUE, DEGRADE, CRITIQUE.</li>
+          <li>Affichage de la prédiction sur TAB5 et dashboard Node-RED.</li>
+          <li>Historisation des mesures dans un fichier CSV.</li>
+          <li>Alertes Email et SMS en cas d’état critique.</li>
+        </ul>
+
+        <h2>Perspectives d’amélioration</h2>
+
+        <p>
+          Connecter de vrais capteurs industriels, intégrer Modbus TCP ou OPC UA,
+          sécuriser MQTT avec TLS et adapter le système à d’autres équipements
+          industriels.
+        </p>
+
+        <h2>Galerie du projet</h2>
+
+        <div class="mini-gallery">
+          <img
+            src="../assets/img/projects/tab5-cnc-interface.jpg"
+            alt="Interface TAB5 du projet CNC"
+          >
+
+          <img
+            src="../assets/img/projects/node-red-cnc.png"
+            alt="Flow Node-RED du projet CNC"
+          >
+
+          <img
+            src="../assets/img/projects/dashboard-cnc-complet.png"
+            alt="Dashboard SCADA CNC"
+          >
+        </div>
+
+      </article>
+
+      <!-- COLONNE LATÉRALE -->
+      <aside class="detail-side reveal">
+
+        <h3>Technologies</h3>
+
+        <div class="chips">
+          <span>TAB5</span>
+          <span>Arduino</span>
+          <span>MQTT</span>
+          <span>Mosquitto</span>
+          <span>Node-RED</span>
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>Random Forest</span>
+        </div>
+
+        <h3>Autres projets</h3>
+
+        <div class="side-links">
+          <a href="cyber-compliance.html">
+            Pré-évaluation de conformité cybersécurité
+          </a>
+
+          <a href="geolocation.html">
+            Géolocalisation Indoor & Outdoor
+          </a>
+
+          <a href="robot-obstacle.html">
+            Robot éviteur d’obstacles
+          </a>
+        </div>
+
+        <a
+          class="btn primary full"
+          href="https://github.com/abdouhayisaliou/maintenance-predictive-avec-tab5-mqtt-et-machine-learning"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-        <img
-          src="../assets/img/projects/node-red-cnc.png"
-          alt="Flow Node-RED du projet CNC"
-        >
-        <img
-          src="../assets/img/projects/dashboard-cnc-complet.png"
-          alt="Dashboard SCADA CNC"
-        >
-      </div>
-
-    </article>
-
-    <aside class="detail-side reveal">
-
-      <h3>Technologies</h3>
-      <div class="chips">
-        <span>TAB5</span>
-        <span>Arduino</span>
-        <span>MQTT</span>
-        <span>Mosquitto</span>
-        <span>Node-RED</span>
-        <span>Python</span>
-        <span>Scikit-learn</span>
-        <span>Random Forest</span>
-      </div>
-
-      <h3>Autres projets</h3>
-      <div class="side-links">
-        <a href="cyber-compliance.html">
-          Pré-évaluation de conformité cybersécurité
+          Voir sur GitHub
         </a>
-        <a href="geolocation.html">
-          Géolocalisation Indoor & Outdoor
+
+        <a class="btn outline full" href="../contact.html">
+          Discuter de ce projet
         </a>
-        <a href="robot-obstacle.html">
-          Robot éviteur d’obstacles
+
+        <a class="btn outline full" href="../projects.html">
+          Retour aux projets
         </a>
-      </div>
 
-      <a
-        class="btn primary full"
-        href="https://github.com/abdouhayisaliou/maintenance-predictive-avec-tab5-mqtt-et-machine-learning"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Voir sur GitHub
-      </a>
+      </aside>
 
-      <a class="btn outline full" href="../contact.html">
-        Discuter de ce projet
-      </a>
-
-      <a class="btn outline full" href="../projects.html">
-        Retour aux projets
-      </a>
-
-    </aside>
-
-  </div>
-</section>
+    </div>
+  </section>
 
 </main>
 
@@ -239,6 +271,7 @@
 
     <div>
       <h3>Abdou-Hayi SALIOU</h3>
+
       <p>
         Futur ingénieur en systèmes électroniques embarqués, orienté IoT,
         supervision industrielle, intelligence artificielle appliquée et
