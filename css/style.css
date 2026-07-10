@@ -758,3 +758,18 @@ input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(86
     height: 190px;
   }
 }
+.project-architecture-image {
+  margin: 22px 0 46px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.project-architecture-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
